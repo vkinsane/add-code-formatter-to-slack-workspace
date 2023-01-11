@@ -75,7 +75,8 @@ function App() {
                 <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
                   <img
                     alt=""
-                    src="https://avatars.slack-edge.com/2023-01-10/4619537860514_fd3e1b2e5c2dbdb645c6_512.png"
+                    // src="https://avatars.slack-edge.com/2023-01-10/4619537860514_fd3e1b2e5c2dbdb645c6_512.png"
+                    src="https://i.imgur.com/VDot8dD.png"
                     style={{ borderRadius: "10px" }}
                   />
                 </div>
@@ -84,7 +85,7 @@ function App() {
                     Code Formatter{" "}
                   </h2>
                   <p className="text-base text-gray-400">by Zipy.ai </p>
-                  <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4" />
+                  <div className="w-12 h-1 bg-yellow-600 rounded mt-2 mb-4" />
                   <p className="text-base text-gray-400">
                     "Make your code look as <br />
                     beautiful as you."
