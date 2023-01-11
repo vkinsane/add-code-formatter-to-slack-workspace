@@ -138,7 +138,7 @@ function App() {
                     Add to Slack
                   </a> */}
                   <a
-                    href="https://slack.com/oauth/v2/authorize?scope=incoming-webhook%2Ccommands&user_scope=&redirect_uri=https%3A%2F%2Fadd-code-formatter-to-workspace.netlify.app%2F&client_id=4641580529056.4611298528886"
+                    href="https://slack.com/oauth/v2/authorize?scope=commands&user_scope=&redirect_uri=https%3A%2F%2Fadd-code-formatter-to-workspace.netlify.app%2F&client_id=4641580529056.4611298528886"
                     style={{
                       alignItems: "center",
                       color: "#000",
