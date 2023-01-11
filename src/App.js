@@ -54,7 +54,7 @@ function App() {
   //with values
   // https://slack.com/api/oauth.v2.access?code=4641580529056.4638571392161.2b27d12ef54492b94adac7fbb0b65adf0c2067c9a4d0d74c9d315761dd6a9f30&client_id=&client_secret=
   return (
-    <div className="App">
+    <div className="App" style={{ height: "100%" }}>
       <ToastContainer
         position="top-right"
         autoClose={10000}
@@ -67,9 +67,12 @@ function App() {
         pauseOnHover
         theme="dark"
       />
-      <section className="text-gray-400 bg-gray-900 body-font">
+      <section
+        style={{ height: "100%" }}
+        className="text-gray-400 bg-gray-900 body-font"
+      >
         <div
-          style={{ height: "100vh" }}
+          style={{ height: "100%" }}
           className="container px-5 py-24 mx-auto flex flex-col"
         >
           <div className="lg:w-4/6 mx-auto  my-auto">
