@@ -19,31 +19,36 @@ const sendPostRequest = async (code) => {
     });
 };
 
-const notify = (message, notificationType) => {
+var notify = (message, notificationType) => {
   toast[notificationType](message, {
-    position: "top-right",
+    position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "dark",
+    theme: "info",
   });
 };
 let code = "";
+
+// window.on = () => {
+//   notify("Bot installed to your workspace", "info");
+// };
+// notify("TEST NOTIFICATION", "info");
+//get the code from url
+const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+
+code = params.code;
+
+if (code) {
+  sendPostRequest(code);
+}
+
 function App() {
-  //get the code from url
-  const params = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop),
-  });
-
-  code = params.code;
-
-  if (code) {
-    sendPostRequest(code);
-  }
-
   //user visits our landing page
   //1. user clicks on add to slack
   //2. user grants permission and we return to our app with code
@@ -54,7 +59,7 @@ function App() {
   //with values
   // https://slack.com/api/oauth.v2.access?code=4641580529056.4638571392161.2b27d12ef54492b94adac7fbb0b65adf0c2067c9a4d0d74c9d315761dd6a9f30&client_id=&client_secret=
   return (
-    <div className="App" style={{ height: "100%" }}>
+    <div className="App">
       <ToastContainer
         position="top-right"
         autoClose={10000}
@@ -65,14 +70,11 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+        theme="info"
       />
-      <section
-        style={{ height: "100%" }}
-        className="text-gray-400 bg-gray-900 body-font"
-      >
+      <section className="text-gray-400 bg-gray-900 body-font">
         <div
-          style={{ height: "100%" }}
+          style={{ height: "100vh" }}
           className="container px-5 py-24 mx-auto flex flex-col"
         >
           <div className="lg:w-4/6 mx-auto  my-auto">
@@ -88,7 +90,7 @@ function App() {
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">
                   <h2 className="font-medium title-font mt-4 text-white text-lg">
-                    Code Formatter{" "}
+                    Code Formatter - For Slack{" "}
                   </h2>
                   <p className="text-base text-gray-400">by Zipy.ai </p>
                   <div className="w-12 h-1 bg-yellow-600 rounded mt-2 mb-4" />
