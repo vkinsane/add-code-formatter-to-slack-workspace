@@ -58,6 +58,7 @@ function App() {
   //if we have code value then do a post request to
   //with values
   // https://slack.com/api/oauth.v2.access?code=4641580529056.4638571392161.2b27d12ef54492b94adac7fbb0b65adf0c2067c9a4d0d74c9d315761dd6a9f30&client_id=&client_secret=
+  console.log(document.scrollingElement);
   return (
     <div className="App">
       <ToastContainer
@@ -77,7 +78,10 @@ function App() {
           style={{ height: "100vh" }}
           className="container px-5 py-24 mx-auto flex flex-col"
         >
-          <div className="lg:w-4/6 mx-auto  my-auto">
+          <div
+            className="lg:w-4/6 mx-auto my-auto"
+            style={{ overflowY: "scroll" }}
+          >
             <div className="flex flex-col sm:flex-row mt-10">
               <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                 <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
