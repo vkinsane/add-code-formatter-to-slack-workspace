@@ -12,7 +12,7 @@ const sendPostRequest = async (code) => {
       `https://slack.com/api/oauth.v2.access?code=${code}&client_id=${client_id}&client_secret=${client_secret}`
     )
     .then((res) => {
-      notify("Bot installed to your workspace", "success");
+      notify("Bot installed to your workspace", "info");
     })
     .catch((err) => {
       notify(err.response.data.errorMessage, "error");
