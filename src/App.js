@@ -202,13 +202,11 @@ function App() {
                   About
                 </p>
                 <p className="leading-relaxed text-lg mb-4">
-                  Current Slack 's in app feature to send code does not have
-                  code formatting feature.. Unformatted code is difficult to
-                  read and understand. Finding errors in code is difficult. A
-                  Slack App which formats users code snippet in a standardized
-                  code format. It makes code easier to read and understand. Easy
-                  to use compared to existing code block feature of the app. It
-                  also detects syntax errors in the code.
+                  Code Formatter is a Slack App that formats users' code
+                  snippets in a standardized format. It makes code easier to
+                  read and understand. It is easy to use compared to the
+                  existing code block feature of the app. It also detects syntax
+                  errors in the code.
                 </p>
                 <ul style={{ listStyleType: "disc" }}>
                   <p className="font-medium title-font mt-4 text-white text-lg">
